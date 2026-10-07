@@ -11,9 +11,7 @@ title: "Schedule"
 | Mon 22 March 2027 | TBA | TBA | Utrecht city centre |
 | Mon 19 April 2027 | TBA | TBA | Utrecht city centre |
 | Mon 31 May 2027 | TBA | TBA | Utrecht city centre |
-| Mon 28 June 2027 | TBA | TBA | Utrecht city centre |
+| Mon 28 June 2027 | TBA | Special Event: Save the Data | Rotterdam |
 {.schedule}
 
-Dates are provisional and follow the last Monday of the month, with a few
-exceptions where that collides with a school or public holiday. Is one of these
-dates a problem for you? [Let us know](/contact/).
+Dates are provisional and follow the last Monday of the month, with a few exceptions where that collides with a school or public holiday. Do you want to present or do you want to be added to the mailing list? [Let us know](/contact/).

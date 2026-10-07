@@ -8,13 +8,13 @@ The seminar is organised by:
 
 | | |
 | :--- | :--- |
-| **Bram van Besouw** | Utrecht School of Economics — [b.vanbesouw@uu.nl](mailto:b.vanbesouw@uu.nl) |
-| **Bas Machielsen** | Utrecht School of Economics — [a.h.machielsen@uu.nl](mailto:a.h.machielsen@uu.nl) |
-| **Giacomo Domini** | Utrecht School of Economics — [g.domini@uu.nl](mailto:g.domini@uu.nl) |
-| **Auke Rijpma** | Utrecht Department of History — [a.rijpma@uu.nl](mailto:a.rijpma@uu.nl) |
+| [Bram van Besouw](https://sites.google.com/view/bramvanbesouw/) | Utrecht School of Economics | [e-mail](mailto:b.vanbesouw@uu.n)|
+| [Bas Machielsen](https://www.basmachielsen.nl) | Utrecht School of Economics | [e-mail](mailto:a.h.machielsen@uu.nl) |
+| [Giacomo Domini](https://www.uu.nl/staff/GDomini) | Utrecht School of Economics | [e-mail](mailto:g.domini@uu.nl) |
+| [Auke Rijpma](https://aukerijpma.nl/) | Utrecht Department of History | [e-mail](mailto:a.rijpma@uu.nl) |
 
-For anything to do with the seminar — proposing a paper, joining the mailing
-list, or flagging a date that does not work — the shared address is the fastest
+For anything to do with the seminar — proposing a paper, or joining the mailing
+list — the shared address is the fastest
 option: [clioseminar@gmail.com](mailto:clioseminar@gmail.com).
 
 ## Our ambitions
