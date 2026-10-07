@@ -73,12 +73,27 @@ themes/DoIt/        The theme (git submodule, pinned to a release)
   After changing it, commit the new pointer in the parent repo, or CI will keep
   building against the old one.
 
-- **`layouts/_markup/render-link.html` overrides the theme.** The theme resolves
-  every Markdown link against Hugo's asset store, so an ordinary link to the home
-  page — `[schedule](/)` — makes it try to publish the assets root and the build
-  fails with `Failed to publish Resource: open .../public: is a directory`. The
-  override skips that lookup for the `""` and `/` destinations. If a future theme
-  release fixes this, the override can go.
+- **`layouts/_markup/render-link.html` and `render-image.html` override the
+  theme.** Two reasons, both worth knowing before you touch them:
+
+  1. The site is served from a subpath. Hugo treats a leading `/` in `relURL`
+     as host-root-relative, so `[Apply](/apply/)` would resolve to
+     `https://basm92.github.io/apply/` and 404. The overrides strip the leading
+     slash before calling `relURL`, which resolves it against the site root
+     *including* `/clioseminar/`. This is why you can keep writing ordinary
+     `/apply/`-style links in Markdown and have them work.
+
+  2. The theme resolves every Markdown link against Hugo's asset store, so a
+     link to the home page — `[schedule](/)` — makes it try to publish the
+     assets root, and the build fails with
+     `Failed to publish Resource: open .../public: is a directory`. The link
+     override skips that lookup for root-relative destinations.
+
+  If a future theme release fixes either, these can go.
+
+- **If you ever move the site to its own domain**, `baseURL` in `hugo.toml`
+  stops having a subpath and both overrides become harmless no-ops — but
+  `params.images` and any `static/` references are worth re-checking.
 
 - **The painting is served from `static/images/clio_seminar_crop.jpg`** (a
   JPEG-compressed version of the 2 MB PNG master, which is kept in `docs/`).

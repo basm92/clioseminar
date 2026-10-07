@@ -1,0 +1,32 @@
+{{/*
+  Override of the DoIt theme's render-image hook, for the same subpath reason as
+  render-link.html: Hugo treats a leading "/" in relURL/absURL as
+  host-root-relative, so an image written as ![alt](/images/x.jpg) in Markdown
+  would point at https://basm92.github.io/images/x.jpg and 404. Stripping the
+  leading slash makes relURL resolve against the site root, subpath included.
+
+  Everything else matches the theme: page-bundle resources still resolve through
+  .Page.Resources, and the theme's responsive WebP variants are unchanged.
+*/}}
+{{- $src := .Destination -}}
+{{- $url := urls.Parse .Destination -}}
+{{- if and (not $url.IsAbs) (hasPrefix $url.Path "/") -}}
+    {{- $src = strings.TrimPrefix "/" $url.Path | relURL -}}
+{{- end -}}
+{{- $lightgallery := .Page.Params.lightgallery | default site.Params.Page.lightgallery | default false -}}
+{{- $optim := slice
+    (dict "Process" "resize 800x webp q75" "descriptor" "800w")
+    (dict "Process" "resize 1200x webp q75" "descriptor" "1200w")
+    (dict "Process" "resize 1600x webp q75" "descriptor" "1600w")
+-}}
+
+{{- if .Title -}}
+<figure>
+    {{- dict "Src" $src "Title" .Text "Caption" .Title "Linked" $lightgallery "Loading" "lazy" "Resources" .Page.Resources "OptimConfig" $optim | partial "plugin/image.html" -}}
+    <figcaption class="image-caption">
+        {{- .Title | safeHTML -}}
+    </figcaption>
+</figure>
+{{- else -}}
+    {{- dict "Src" $src "Class" "tw:inline" "Title" .Text "Caption" .Title "Loading" "lazy" "Resources" .Page.Resources "OptimConfig" $optim | partial "plugin/image.html" -}}
+{{- end -}}

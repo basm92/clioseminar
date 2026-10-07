@@ -1,19 +1,27 @@
 {{/*
-  Override of the DoIt theme's render-link hook.
+  Override of the DoIt theme's render-link hook. Two changes, both needed to
+  serve this site from the /clioseminar/ subpath.
 
-  The theme resolves every link destination against Hugo's assets store to
-  support links to page-bundle resources. For a destination of "" or "/" that
-  lookup finds the assets root itself, which then fails at publish time with:
+  1. Subpath. Hugo treats a leading "/" in relURL/absURL as host-root-relative,
+     so a Markdown link written as [Apply](/apply/) would point at
+     https://basm92.github.io/apply/ and 404. Stripping the leading slash makes
+     relURL resolve against the site root, subpath included.
 
-      ERROR Failed to publish Resource: open .../public: is a directory
+  2. Theme bug. The theme resolves every destination against Hugo's asset store
+     to support links to page-bundle resources. For a destination of "" or "/"
+     that lookup finds the assets root itself and the build fails with:
 
-  so an ordinary link to the home page, e.g. [schedule](/), breaks the build.
-  We skip resource resolution for those two paths — Hugo's own URL handling is
-  correct for them — and otherwise behave exactly as the theme does.
+         ERROR Failed to publish Resource: open .../public: is a directory
+
+     Root-relative destinations are handled by (1), so they skip the lookup.
+
+  Absolute URLs and page-bundle-relative paths behave exactly as in the theme.
 */}}
 {{- $destination := .Destination -}}
-{{- $path := (urls.Parse .Destination).Path | strings.TrimPrefix "./" -}}
-{{- if not (in (slice "" "/") $path) -}}
+{{- $url := urls.Parse .Destination -}}
+{{- if and (not $url.IsAbs) (hasPrefix $url.Path "/") -}}
+    {{- $destination = strings.TrimPrefix "/" $url.Path | relURL -}}
+{{- else -}}
     {{- with dict "Path" $destination "Resources" .Page.Resources | partial "function/resource.html" -}}
         {{- $destination = .RelPermalink -}}
     {{- end -}}
