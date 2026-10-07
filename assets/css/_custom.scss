@@ -26,19 +26,17 @@
 }
 
 // --- Schedule table --------------------------------------------------------
-// Declared as `{.schedule}` after the table in content/_index.md.
-//
-// Left to itself the browser gives the "Paper" column whatever width is left
-// over once the (identical, in every row) Time and Location columns have taken
-// their share, which wraps paper titles over many lines. Fix the proportions
-// instead.
+// Declared as `{.schedule}` after the table in content/_index.md. Four columns:
+// Date, Speaker, Paper, Location. If you add or remove a column there, the
+// widths below need to change with it — with `table-layout: fixed` a stale
+// nth-child rule silently mis-sizes the columns rather than failing loudly.
 
 .page .content .table-wrapper > table.schedule {
   table-layout: fixed;
   // Fits the theme's content column, so nothing overflows on desktop. Narrower
   // than this the columns stop being readable, so on phones the theme's
   // `overflow-x: auto` wrapper scrolls the table sideways instead.
-  min-width: 40rem;
+  min-width: 36rem;
 
   th,
   td {
@@ -47,11 +45,21 @@
     padding-inline: 0.6rem;
   }
 
-  th:nth-child(1), td:nth-child(1) { width: 16%; }  // Date
-  th:nth-child(2), td:nth-child(2) { width: 20%; }  // Speaker
-  th:nth-child(3), td:nth-child(3) { width: 35%; }  // Paper
-  th:nth-child(4), td:nth-child(4) { width: 13%; }  // Time
-  th:nth-child(5), td:nth-child(5) { width: 16%; }  // Location
+  th:nth-child(1), td:nth-child(1) { width: 17%; }  // Date
+  th:nth-child(2), td:nth-child(2) { width: 21%; }  // Speaker
+  th:nth-child(3), td:nth-child(3) { width: 44%; }  // Paper
+  th:nth-child(4), td:nth-child(4) { width: 18%; }  // Location
+}
+
+// --- Page titles -----------------------------------------------------------
+// The theme's `layouts/page.html` marks standalone pages `.special`, and
+// `.special` right-aligns their title and subtitle. That is the theme's own
+// design (its demo site does the same), but it reads as a rendering fault on a
+// content page, so put the titles back on the left.
+
+.special .single-title,
+.special .single-subtitle {
+  text-align: left;
 }
 
 // --- General reading comfort ----------------------------------------------

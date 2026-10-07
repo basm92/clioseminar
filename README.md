@@ -62,7 +62,7 @@ content/            Markdown — this is where you edit
 hugo.toml           Site configuration: title, menu, theme settings
 assets/css/         _custom.scss — the small amount of styling layered on the theme
 static/             Files served as-is: the painting, favicons
-layouts/_markup/    A patched link render hook — see below
+layouts/_markup/    Patched link and image render hooks — see below
 docs/               Background documents, not part of the published site
 themes/DoIt/        The theme (git submodule, pinned to a release)
 ```
@@ -100,13 +100,13 @@ themes/DoIt/        The theme (git submodule, pinned to a release)
   Replacing the image means producing a new JPEG of roughly the same size —
   around 1400 px wide — rather than dropping the original in.
 
-- **Page titles are right-aligned.** That is the DoIt theme's own styling for
-  standalone pages, not a bug; the theme's demo site does the same. To
-  left-align them, add to `assets/css/_custom.scss`:
+- **The schedule table's column widths live in `assets/css/_custom.scss`**, keyed
+  to the four columns of the table in `content/_index.md` (Date, Speaker, Paper,
+  Location). With `table-layout: fixed`, adding or removing a column there
+  silently mis-sizes the rest rather than failing loudly, so update both together.
 
-  ```scss
-  .special .single-title,
-  .special .single-subtitle {
-    text-align: left;
-  }
-  ```
+- **Page titles are left-aligned by an override.** The theme's
+  `layouts/page.html` marks standalone pages `.special`, and `.special`
+  right-aligns their title and subtitle — the theme's own design, and its demo
+  site does the same, but it reads as a rendering fault on a content page.
+  `_custom.scss` sets them back to `text-align: left`.
