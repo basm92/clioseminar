@@ -4,9 +4,11 @@ title: "Cliometrics Seminar"
 
 ## Cliometrics Seminar
 
-Starting in October 2026, we will host a monthly seminar series in Utrecht, focused on quantitative economic history. We invite papers from related disciplines, such as financial and business history, economic geography and political sciences as well, provided they use historical data and high-quality econometric analysis of that data. The aim of the seminar is to provide a platform for constructive but deep discussion of the econom(etr)ic methods applied to historical data, based on a keen knowledge of the historical contexts that produced the data and that inform the identification strategies used. 
+Starting in October 2026, we will host a monthly seminar series in Utrecht, focused on quantitative economic history. We invite papers from related disciplines, such as financial and business history, economic geography and political sciences as well, provided they use historical data and high-quality econometric analysis of that data. 
 
 ![A group of scholars gathered around a seminar table in a library, with the Utrecht Dom tower visible through the windows](/images/clio_seminar_crop.jpg)
+
+The aim of the seminar is to provide a platform for constructive but deep discussion of the econom(etr)ic methods applied to historical data, based on a keen knowledge of the historical contexts that produced the data and that inform the identification strategies used. In short, we are looking for:
 
 > Historically informed economics, or economically informed historical research;
 > preferably both.
