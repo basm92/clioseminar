@@ -1,0 +1,16 @@
+{{/*
+  Renders the schedule table on whichever page calls it: the home page and the
+  Schedule page both use {{< schedule >}}.
+
+  The table exists in exactly one file — content/schedule.md — and this pulls
+  that page's rendered content in, so the two pages cannot drift apart. Edit the
+  table there (not in content/_index.md) and both pages change together.
+
+  A missing /schedule/ page fails the build on purpose. Silently dropping the
+  schedule from the home page would be far worse than a red CI run.
+*/}}
+{{- with site.GetPage "/schedule" -}}
+  {{- .Content -}}
+{{- else -}}
+  {{- errorf "shortcode schedule: no page at /schedule/ — the schedule table lives in content/schedule.md" -}}
+{{- end -}}

@@ -11,7 +11,7 @@ There is no form to fill in. To propose a paper, send an email to
 - the **title** of the paper;
 - an **abstract**;
 - an indication of your **availability** — which of the
-  [scheduled dates](/) work for you, and which do not;
+  [scheduled dates](/schedule/) work for you, and which do not;
 - the **stage** of the paper: a research proposal, a first draft, a working
   paper, or something close to submission.
 

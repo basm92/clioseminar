@@ -32,8 +32,8 @@ disableKinds = ["taxonomy", "term", "section"]
     # Allow raw HTML in Markdown should it ever be needed.
     unsafe = true
   [markup.goldmark.parser.attribute]
-    # Lets a Markdown block carry a class, e.g. `{.schedule}` after a table in
-    # content/_index.md. Used to size the schedule table's columns.
+    # Lets a Markdown block carry a class, e.g. `{.schedule}` after the table in
+    # content/schedule.md. Used to size the schedule table's columns.
     block = true
     title = true
   [markup.goldmark.extensions]
@@ -118,12 +118,17 @@ disableKinds = ["taxonomy", "term", "section"]
     url = "/"
     weight = 1
   [[menu.main]]
+    identifier = "schedule"
+    name = "Schedule"
+    url = "/schedule/"
+    weight = 2
+  [[menu.main]]
     identifier = "apply"
     name = "Apply"
     url = "/apply/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 3
+    weight = 4

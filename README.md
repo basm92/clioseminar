@@ -15,14 +15,17 @@ automatically — usually within a minute or two.
 
 | File | What it controls |
 | :--- | :--- |
-| `content/_index.md` | The main page: the painting, the slogan, and the schedule table |
+| `content/_index.md` | The main page: the painting, the slogan, and the schedule (which it includes from `content/schedule.md`) |
+| `content/schedule.md` | The schedule table — the single source for both the Schedule page and the main page |
 | `content/apply.md` | The Apply page |
 | `content/contact.md` | The Contact page: organizers and the seminar's ambitions |
 
 ### Updating the schedule
 
-The schedule is an ordinary Markdown table in `content/_index.md`. Add, remove
-or edit a row:
+The schedule is an ordinary Markdown table in **`content/schedule.md`**. That is
+the only copy: the Schedule page shows it directly, and the main page pulls the
+same table in with `{{< schedule >}}`, so editing the one file updates both
+pages. Add, remove or edit a row there:
 
 ```markdown
 | Mon 26 October 2026 | Amaury de Vicq (University of Groningen) | Aspirations, Investment Horizon... | 13:00–14:15 | Utrecht city centre |
@@ -32,6 +35,10 @@ Two things to leave alone: the header row and the separator row directly
 underneath it, and the line `{.schedule}` just below the last row — that tag
 drives the column widths. Everything else is free text. A row whose speaker is
 not yet known is `TBA`.
+
+Do not paste a second copy of the table into `content/_index.md`. The main page
+is meant to hold `{{< schedule >}}` and nothing else where the table goes;
+that is what keeps the two pages in step.
 
 ## Running it locally
 
@@ -56,11 +63,13 @@ git submodule update --init --recursive
 
 ```
 content/            Markdown — this is where you edit
-  _index.md           main page, including the schedule table
+  _index.md           main page (includes the schedule via the shortcode)
+  schedule.md         the schedule table — single source for both pages
   apply.md            Apply page
   contact.md          Contact page
 hugo.toml           Site configuration: title, menu, theme settings
 assets/css/         _custom.scss — the small amount of styling layered on the theme
+layouts/shortcodes/ schedule.html — includes content/schedule.md where used
 static/             Files served as-is: the painting, favicons
 layouts/_markup/    Patched link and image render hooks — see below
 docs/               Background documents, not part of the published site
@@ -101,9 +110,15 @@ themes/DoIt/        The theme (git submodule, pinned to a release)
   around 1400 px wide — rather than dropping the original in.
 
 - **The schedule table's column widths live in `assets/css/_custom.scss`**, keyed
-  to the four columns of the table in `content/_index.md` (Date, Speaker, Paper,
+  to the four columns of the table in `content/schedule.md` (Date, Speaker, Paper,
   Location). With `table-layout: fixed`, adding or removing a column there
   silently mis-sizes the rest rather than failing loudly, so update both together.
+
+- **The main page's schedule comes from `content/schedule.md`** through the
+  `schedule` shortcode in `layouts/shortcodes/schedule.html`, which includes that
+  page's rendered content. Renaming or deleting `content/schedule.md` therefore
+  fails the build on purpose, with a message naming the file — a missing page
+  would otherwise drop the table from the main page without any visible error.
 
 - **Page titles are left-aligned by an override.** The theme's
   `layouts/page.html` marks standalone pages `.special`, and `.special`
