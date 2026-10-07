@@ -1,0 +1,22 @@
+{{/*
+  Override of the DoIt theme's render-link hook.
+
+  The theme resolves every link destination against Hugo's assets store to
+  support links to page-bundle resources. For a destination of "" or "/" that
+  lookup finds the assets root itself, which then fails at publish time with:
+
+      ERROR Failed to publish Resource: open .../public: is a directory
+
+  so an ordinary link to the home page, e.g. [schedule](/), breaks the build.
+  We skip resource resolution for those two paths — Hugo's own URL handling is
+  correct for them — and otherwise behave exactly as the theme does.
+*/}}
+{{- $destination := .Destination -}}
+{{- $path := (urls.Parse .Destination).Path | strings.TrimPrefix "./" -}}
+{{- if not (in (slice "" "/") $path) -}}
+    {{- with dict "Path" $destination "Resources" .Page.Resources | partial "function/resource.html" -}}
+        {{- $destination = .RelPermalink -}}
+    {{- end -}}
+{{- end -}}
+{{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
+{{- partial "plugin/link.html" $options -}}

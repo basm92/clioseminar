@@ -1,0 +1,128 @@
+# =============================================================================
+# Cliometrics Seminar — site configuration
+# =============================================================================
+# Published at https://basm92.github.io/clioseminar/
+# Built by Hugo (extended) with the DoIt theme (see themes/DoIt).
+#
+# Most day-to-day edits happen in content/, not here.
+# =============================================================================
+
+baseURL = "https://basm92.github.io/clioseminar/"
+title = "Cliometrics Seminar"
+locale = "en"
+defaultContentLanguage = "en"
+theme = "DoIt"
+
+enableRobotsTXT = true
+enableEmoji = true
+# Resolves page dates from git history; needs a full clone in CI, so we use
+# front matter / filenames for dates instead of relying on it.
+enableGitInfo = false
+
+# There are no tags, categories or sections on this site, so don't build pages
+# for them.
+disableKinds = ["taxonomy", "term", "section"]
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[markup]
+  [markup.goldmark.renderer]
+    # Allow raw HTML in Markdown should it ever be needed.
+    unsafe = true
+  [markup.goldmark.parser.attribute]
+    # Lets a Markdown block carry a class, e.g. `{.schedule}` after a table in
+    # content/_index.md. Used to size the schedule table's columns.
+    block = true
+    title = true
+  [markup.goldmark.extensions]
+    table = true
+    footnote = true
+    typographer = true
+    definitionList = true
+    strikethrough = true
+    linkify = true
+    taskList = true
+
+# -----------------------------------------------------------------------------
+# Theme parameters
+# -----------------------------------------------------------------------------
+[params]
+  title = "Cliometrics Seminar"
+  description = "A seminar series in Utrecht for researchers working at the intersection of economics and history."
+  keywords = ["cliometrics", "economic history", "seminar", "Utrecht"]
+  defaultTheme = "auto"
+  dateFormat = "2 January 2006"
+  # Used for social-media link previews.
+  images = ["/images/clio_seminar_crop.jpg"]
+  enablePWA = false
+
+  [params.app]
+    title = "Cliometrics Seminar"
+
+  # Site title in the navigation bar. No logo: the painting belongs on the
+  # main page, not shrunk into the header.
+  [params.header]
+    themeChangeMode = "switch"
+    [params.header.title]
+      logo = ""
+      name = "Cliometrics Seminar"
+      typeit = false
+
+  [params.footer]
+    enable = true
+    hugo = false
+    hostedOn = ""
+    copyright = true
+    author = false
+    since = 2026
+    license = ""
+
+  # The main page is written entirely in content/_index.md, so the theme's
+  # profile block (which would show an avatar) and post list are both off.
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = false
+    [params.home.posts]
+      enable = false
+
+  [params.page]
+    linkToMarkdown = false
+    enableLastMod = false
+    enableWordCount = false
+    enableReadingTime = false
+    # The pages here are short, and the schedule table is the point.
+    [params.page.toc]
+      enable = false
+    [params.page.header.number]
+      enable = false
+    # The schedule is chronological; sortable column headers would only get in
+    # the way.
+    [params.page.table]
+      sort = false
+    [params.page.share]
+      enable = false
+    [params.page.comment]
+      enable = false
+
+  [params.search]
+    enable = false
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "apply"
+    name = "Apply"
+    url = "/apply/"
+    weight = 2
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
