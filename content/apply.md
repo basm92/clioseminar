@@ -6,7 +6,7 @@ We are always looking for papers for the Cliometrics Seminar, and we would be
 glad to hear from you, whether you are a PhD student or somebody in a more advanced career stage.
 
 There is no form to fill in. To propose a paper, send an email to
-[clioseminar@gmail.com](mailto:clioseminar@gmail.com) with:
+[utrechtclioseminar@proton.me](mailto:utrechtclioseminar@proton.me) with:
 
 - the **title** of the paper;
 - an **abstract**;

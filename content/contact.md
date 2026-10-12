@@ -15,7 +15,7 @@ The seminar is organised by:
 
 For anything to do with the seminar — proposing a paper, or joining the mailing
 list — the shared address is the fastest
-option: [clioseminar@gmail.com](mailto:clioseminar@gmail.com).
+option: [utrechtclioseminar@proton.me](mailto:utrechtclioseminar@proton.me).
 
 ## Our ambitions
 
