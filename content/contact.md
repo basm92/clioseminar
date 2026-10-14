@@ -8,10 +8,11 @@ The seminar is organised by:
 
 | | |
 | :--- | :--- |
-| [Bram van Besouw](https://sites.google.com/view/bramvanbesouw/) | Utrecht School of Economics | [e-mail](mailto:b.vanbesouw@uu.n)|
+| [Bram van Besouw](https://sites.google.com/view/bramvanbesouw/) | Utrecht School of Economics | [e-mail](mailto:b.vanbesouw@uu.nl) |
 | [Bas Machielsen](https://www.basmachielsen.nl) | Utrecht School of Economics | [e-mail](mailto:a.h.machielsen@uu.nl) |
 | [Giacomo Domini](https://www.uu.nl/staff/GDomini) | Utrecht School of Economics | [e-mail](mailto:g.domini@uu.nl) |
 | [Auke Rijpma](https://aukerijpma.nl/) | Utrecht Department of History | [e-mail](mailto:a.rijpma@uu.nl) |
+| [Amaury de Vicq](https://www.amaurydevicq.info/) | University of Groningen | [e-mail](mailto:a.devicq@rug.nl) |
 
 For anything to do with the seminar — proposing a paper, or joining the mailing
 list — the shared address is the fastest
