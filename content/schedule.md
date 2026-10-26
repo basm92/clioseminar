@@ -4,7 +4,7 @@ title: "Schedule"
 
 | Date | Speaker | Paper | Location |
 | :--- | :------ | :---- | :------- |
-| Mon 26 October 2026 | [Amaury de Vicq](https://www.amaurydevicq.info/) (University of Groningen) | Aspirations, Investment Horizon, and Skewness Demand: Evidence from the 1905 Dutch Lottery Ban | Utrecht city centre |
+| Mon 26 October 2026 | [Amaury de Vicq](https://www.amaurydevicq.info/) (University of Groningen) | Aspirations, Investment Horizon, and Skewness Demand: Evidence from the 1905 Dutch Lottery Ban | Drift 13, room 205 |
 | Mon 30 November 2026 | [Sandra de Pleijt](https://sites.google.com/site/alexandramdepleijt/) (Wageningen University & Research) | TBA | Utrecht city centre |
 | Mon 25 January 2027 | [Daniel Gallardo-Albarran](https://danielgallardoalbarran.com/) (Wageningen University & Research) | TBA | Utrecht city centre |
 | Mon 15 February 2027 | TBA | TBA | Utrecht city centre |
