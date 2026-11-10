@@ -10,7 +10,7 @@ title: "Schedule"
 | Mon 15 February 2027 | TBA | TBA | Utrecht city centre |
 | Mon 22 March 2027 | TBA | TBA | Utrecht city centre |
 | Mon 19 April 2027 | TBA | TBA | Utrecht city centre |
-| Mon 31 May 2027 | TBA | TBA | Utrecht city centre |
+| Mon 31 May 2027 | [Michiel de Haas](https://www.wur.nl/en/persons/dr-ma-michiel-de-haas) (Wageningen University & Research) | TBA | Utrecht city centre |
 | Mon 28 June 2027 | TBA | Special Event: Save the Date | Rotterdam |
 {.schedule}
 
