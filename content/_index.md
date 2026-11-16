@@ -3,7 +3,9 @@ title: "Cliometrics Seminar"
 ---
 
 ## Cliometrics Seminar
-Starting in October 2026, we will host a monthly seminar series in Utrecht, focused on quantitative economic, financial and business history. 
+Starting in October 2026, we will host a monthly seminar series in Utrecht, focused on quantitative economic, financial and business history.
+
+[Join the mailing list][signup] to receive seminar announcements and updates.
 
 ![A group of scholars gathered around a seminar table in a library, with the Utrecht Dom tower visible through the windows](/images/clio_seminar_crop.jpg)
 
@@ -23,4 +25,4 @@ We welcome presentations on any topic in economic, financial and business histor
 
 Interested in presenting? [Apply for a slot](/apply/).
 
-
+[signup]: https://f198acab.sibforms.com/serve/MUIFAAR87NjKNSE1UbN2F9Q6WxkrcUPMCizHzW1--n_THDuKrlZLDolRODBkY1ZFfg9VWVbbyBfq2MsocXCWJdVOtJ7m6GjP4I9rhtYKiNeazzo665fmwCtZ_pL2xrB3cQY7_l1ssVG4AJvN9HIlKVOB1gO2Ky0YTQUuPUqtxMWUOkwbS0a9Rlj0QPy5iCZm2qjE2Hd7zXOY34IolQ==

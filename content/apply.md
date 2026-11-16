@@ -19,4 +19,6 @@ That last point matters to us. Early-stage work is very welcome here. What we as
 
 We will get back to you with a slot and confirm the date well in advance. Sessions run from 13:00 to 14:15 in Utrecht city centre, within walking distance of Utrecht Centraal railway station.
 
-If you are unsure whether your work fits, or you would simply like to come along first, you are very welcome to do so — [get in touch](/contact/) and we will add you to the mailing list.
+If you are unsure whether your work fits, or you would simply like to come along first, you are very welcome to do so — [join the mailing list][signup] to hear about upcoming talks. If you have questions about presenting, [get in touch](/contact/).
+
+[signup]: https://f198acab.sibforms.com/serve/MUIFAAR87NjKNSE1UbN2F9Q6WxkrcUPMCizHzW1--n_THDuKrlZLDolRODBkY1ZFfg9VWVbbyBfq2MsocXCWJdVOtJ7m6GjP4I9rhtYKiNeazzo665fmwCtZ_pL2xrB3cQY7_l1ssVG4AJvN9HIlKVOB1gO2Ky0YTQUuPUqtxMWUOkwbS0a9Rlj0QPy5iCZm2qjE2Hd7zXOY34IolQ==
