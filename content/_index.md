@@ -21,8 +21,5 @@ We welcome presentations on any topic in economic, financial and business histor
 
 {{< schedule >}}
 
-## Contact
-
-Interested in presenting? [Apply for a slot](/apply/).
 
 [signup]: https://f198acab.sibforms.com/serve/MUIFAAR87NjKNSE1UbN2F9Q6WxkrcUPMCizHzW1--n_THDuKrlZLDolRODBkY1ZFfg9VWVbbyBfq2MsocXCWJdVOtJ7m6GjP4I9rhtYKiNeazzo665fmwCtZ_pL2xrB3cQY7_l1ssVG4AJvN9HIlKVOB1gO2Ky0YTQUuPUqtxMWUOkwbS0a9Rlj0QPy5iCZm2qjE2Hd7zXOY34IolQ==
