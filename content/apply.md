@@ -1,5 +1,5 @@
 ---
-title: "Apply"
+title: "Present your work"
 ---
 
 We are always looking for papers for the Cliometrics Seminar, and we would be

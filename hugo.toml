@@ -124,7 +124,7 @@ disableKinds = ["taxonomy", "term", "section"]
     weight = 2
   [[menu.main]]
     identifier = "apply"
-    name = "Apply"
+    name = "Present your work"
     url = "/apply/"
     weight = 3
   [[menu.main]]

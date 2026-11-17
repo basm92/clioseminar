@@ -17,7 +17,7 @@ automatically — usually within a minute or two.
 | :--- | :--- |
 | `content/_index.md` | The main page: the painting, the slogan, and the schedule (which it includes from `content/schedule.md`) |
 | `content/schedule.md` | The schedule table — the single source for both the Schedule page and the main page |
-| `content/apply.md` | The Apply page |
+| `content/apply.md` | The "Present your work" page |
 | `content/contact.md` | The Contact page: organizers and the seminar's ambitions |
 
 ### Updating the schedule
@@ -65,7 +65,7 @@ git submodule update --init --recursive
 content/            Markdown — this is where you edit
   _index.md           main page (includes the schedule via the shortcode)
   schedule.md         the schedule table — single source for both pages
-  apply.md            Apply page
+  apply.md            "Present your work" page
   contact.md          Contact page
 hugo.toml           Site configuration: title, menu, theme settings
 assets/css/         _custom.scss — the small amount of styling layered on the theme
